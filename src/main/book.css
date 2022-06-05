@@ -1,0 +1,59 @@
+.book-wrapper {
+  max-width: 352px;
+  padding: 10px;
+}
+
+.book-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-img img {
+  height: 264px;
+}
+
+.book-name {
+  font-family: Cormorant;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.book-author {
+  font-family: Cormorant;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.book-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.price {
+  font-family: Cormorant;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating-star {
+  background-image: url(../assets/img/star.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+}
+
+.rating-starBlack {
+  background-image: url(../assets/img/star-black.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+}

@@ -1,0 +1,10 @@
+.content-title {
+  font-family: Cormorant;
+  font-weight: 600;
+  font-size: 34px;
+}
+
+.books-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}

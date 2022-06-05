@@ -1,10 +1,11 @@
 @font-face {
   font-family: Cormorant;
-  src: url(./assets/fonts/CormorantGaramond-Regular.ttf)
+  src: url(./assets/fonts/CormorantGaramond-Regular.ttf);
 }
 
 .wrapper {
   max-width: 1120px;
   background-color: aquamarine;
   margin: 0 auto;
+  padding: 0 20px;
 }
