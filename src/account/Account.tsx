@@ -11,7 +11,7 @@ const Account = () => {
       <Header />
       <div className="account-wrapper">
         <Link to="/">
-          <div className="account-back"></div>
+          <div className="common-buttonBack"></div>
         </Link>
         <p className="account-title common-title">Account</p>
         <p className="common-subtitle">Profile</p>

@@ -16,6 +16,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 544px;
+  height: 472px;
+  background-color: #fee9e2;
 }
 
 .item-inform {

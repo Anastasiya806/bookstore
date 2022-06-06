@@ -1,7 +1,7 @@
 .book-wrapper {
-  max-width: 352px;
+  width: 352px;
   padding: 10px;
-  max-height: 454px;
+  height: 454px;
 }
 
 .book-img {
