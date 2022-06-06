@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./header.css";
 
 const Header = () => {
@@ -11,7 +12,7 @@ const Header = () => {
       <div className="icons">
         <div className="like svg"></div>
         <div className="shop svg"></div>
-        <div className="user svg"></div>
+        <Link to="account"><div className="user svg"></div></Link>
       </div>
     </div>
   );

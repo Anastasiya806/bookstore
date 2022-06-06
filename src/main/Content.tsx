@@ -1,6 +1,8 @@
 import Book from "./Book";
 import "./content.css";
 import { useState, useEffect } from "react";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 
 interface IBook {
   image: string;
@@ -26,11 +28,15 @@ const Content = () => {
   }, []);
 
   return (
-    <div className="content-wrapper">
-      <p className="content-title">New releases books</p>
-      <div className="books-wrapper">
-        {data && data.map((book) => <Book item={book} />)}
+    <div className="common-wrapper">
+      <Header />
+      <div className="content-wrapper">
+        <p className="content-title">New releases books</p>
+        <div className="books-wrapper">
+          {data && data.map((book) => <Book item={book} />)}
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };
