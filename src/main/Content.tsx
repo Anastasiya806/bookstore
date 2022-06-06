@@ -1,6 +1,6 @@
 import Book from "./Book";
 import "./content.css";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 interface IBook {
   image: string;
@@ -27,7 +27,7 @@ const Content = () => {
 
   return (
     <div className="content-wrapper">
-      <p className="content-title">NEW RELEASES BOOKS</p>
+      <p className="content-title">New releases books</p>
       <div className="books-wrapper">
         {data && data.map((book) => <Book item={book} />)}
       </div>

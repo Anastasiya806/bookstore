@@ -17,13 +17,17 @@ const Book = (props: any) => {
       <div className="book-img">
         <img src={image} />
       </div>
-      <p className="book-name">{title}</p>
-      <p className="book-author">{subtitle}</p>
       <div className="book-info">
-        <p className="price">{price}</p>
-        <div className="rating">
-          <div className="rating-star"></div>
-          <div className="rating-starBlack"></div>
+        <div>
+          <p className="book-name">{title}</p>
+          <p className="book-author">{subtitle}</p>
+        </div>
+        <div className="book-attributes">
+          <p className="price">{price}</p>
+          <div className="rating">
+            <div className="rating-star"></div>
+            <div className="rating-starBlack"></div>
+          </div>
         </div>
       </div>
     </div>

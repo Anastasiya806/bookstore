@@ -1,12 +1,12 @@
-import './header.css'
+import "./header.css";
 
 const Header = () => {
   return (
     <div className="header-wrapper">
-      <p className='header-title'>BOOKSTORE</p>
-      <div className='header-input'>
+      <p className="header-title">Bookstore</p>
+      <div className="header-input">
         <input placeholder="Search" />
-        <div className='search'></div>
+        <div className="search"></div>
       </div>
       <div className="icons">
         <div className="like svg"></div>
