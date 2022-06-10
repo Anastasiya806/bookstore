@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./book.css";
+import Rating from "./Rating";
 
 interface IBook {
   image: string;
@@ -10,11 +11,11 @@ interface IBook {
   url: string;
 }
 
-const Book = (props: any) => {
+const Book = (props: {item: IBook}) => {
   const { title, subtitle, price, image, isbn13 } = props.item;
 
   return (
-    <Link to={isbn13}>
+    <Link to={`/books/${isbn13}`}>
       <div className="book-wrapper">
         <div className="book-img">
           <img src={image} />
@@ -27,8 +28,7 @@ const Book = (props: any) => {
           <div className="book-attributes">
             <p className="price">{price}</p>
             <div className="rating">
-              <div className="rating-star"></div>
-              <div className="rating-starBlack"></div>
+            <Rating stars={'4'} />
             </div>
           </div>
         </div>

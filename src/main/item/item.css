@@ -45,20 +45,6 @@
   display: flex;
 }
 
-.item-blackStar {
-  background-image: url(../../assets/img/star-black.svg);
-  background-repeat: no-repeat;
-  width: 14px;
-  height: 14px;
-}
-
-.item-star {
-  background-image: url(../../assets/img/star.svg);
-  background-repeat: no-repeat;
-  width: 14px;
-  height: 14px;
-}
-
 .item-details p {
   margin-bottom: 10px;
   font-family: Jost;

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Footer from "../../footer/Footer";
-import Header from "../../header/Header";
 import { Link } from "react-router-dom";
+import Rating from "../Rating";
 import "./item.css";
+// import Subscribe from "../../subscribe/Subscribe";
 
 interface IBookItem {
   title: string;
@@ -41,7 +41,6 @@ const Item = () => {
 
   return (
     <div className="common-wrapper">
-      <Header />
       <div className="item-wrapper">
         <Link to="/">
           <div className="common-buttonBack"></div>
@@ -57,8 +56,7 @@ const Item = () => {
             <div className="item-price">
               <p>{data?.price}</p>
               <div className="item-stars">
-                <div className="item-blackStar"></div>
-                <div className="item-star"></div>
+                {rating && <Rating stars={rating}/>}
               </div>
             </div>
             <div className="item-inform">
@@ -96,7 +94,7 @@ const Item = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Subscribe /> */}
     </div>
   );
 };

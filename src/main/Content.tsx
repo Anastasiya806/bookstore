@@ -1,12 +1,11 @@
 import Book from "./Book";
 import { useState, useEffect } from "react";
-import Header from "../header/Header";
-import Footer from "../footer/Footer";
 import Subscribe from "../subscribe/Subscribe";
 import SingIn from "../singIn/SingIn";
 import SingUp from "../singUp/SingUp";
 import "./content.css";
 import Reset from "../reset/Reset";
+// import SimilarBooks from "./similarBooks/SimilarBooks";
 
 interface IBook {
   image: string;
@@ -22,7 +21,7 @@ const Content = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await fetch("https://api.itbook.store/1.0/search/mongodb");
+      const result = await fetch("https://api.itbook.store/1.0/new");
       const resJson = await result.json();
 
       setData(resJson.books);
@@ -30,22 +29,19 @@ const Content = () => {
 
     fetchData();
   }, []);
+  {/* <SingIn />
+  <SingUp />
+  <Reset /> */}
+  {/* <SimilarBooks /> */}
 
   return (
-    <div className="common-wrapper">
-      <Header />
       <div className="content-wrapper">
         <p className="content-title">New releases books</p>
         <div className="books-wrapper">
           {data && data.map((book) => <Book item={book} />)}
         </div>
+        <Subscribe />
       </div>
-      <Subscribe />
-      <Footer />
-      {/* <SingIn /> */}
-      {/* <SingUp /> */}
-      {/* <Reset /> */}
-    </div>
   );
 };
 

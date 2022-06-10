@@ -1,23 +1,28 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./header/Header";
 import Content from "./main/Content";
 import Subscribe from "./subscribe/Subscribe";
 import Footer from "./footer/Footer";
-import Item from "./main/item/Item"
-import Account from "./account/Account"
+import Item from "./main/item/Item";
+import Account from "./account/Account";
 import "./common.css";
-
+import "./null.css";
 
 function App() {
   return (
-    <div className="common-wrapper">
-      {/* <Header /> */}
-      {/* <Content /> */}
-      {/* <Subscribe /> */}
-      {/* <Account /> */}
-      {/* <Footer /> */}
-      {/* <Item /> */}
-      {/* <Account /> */}
-    </div>
+    <>
+      <BrowserRouter>
+        <div className="common-wrapper">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Content />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/books/:bookId" element={<Item />} />
+          </Routes>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </>
   );
 }
 

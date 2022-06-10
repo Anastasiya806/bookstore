@@ -1,0 +1,20 @@
+.similarBooks-title p {
+  font-family: Cormorant;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase
+}
+
+.left-arrow {
+  background-image: url(../../assets/img/left-arrow.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 14px;
+}
+
+.right-arrow {
+  background-image: url(../../assets/img/right-arrow.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 14px;
+}

@@ -1,14 +1,9 @@
-import Header from "../header/Header";
-import Footer from "../footer/Footer";
 import { Link } from "react-router-dom";
-import "../common.css";
 import "./account.css";
-import "../common.css";
+
 
 const Account = () => {
   return (
-    <div className="common-wrapper">
-      <Header />
       <div className="account-wrapper">
         <Link to="/">
           <div className="common-buttonBack"></div>
@@ -45,8 +40,6 @@ const Account = () => {
           <button className="account-buttonCancel">Cancel</button>
         </div>
       </div>
-      <Footer />
-    </div>
   );
 };
 
