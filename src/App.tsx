@@ -7,6 +7,7 @@ import Item from "./main/item/Item";
 import Account from "./account/Account";
 import "./common.css";
 import "./null.css";
+import Registration from "./registration/Registration";
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Content />} />
-            <Route path="/account" element={<Account />} />
+            <Route path="/accountSettings" element={<Account />} />
             <Route path="/books/:bookId" element={<Item />} />
+            <Route path="/registration" element={<Registration />} />
           </Routes>
           <Footer />
         </div>

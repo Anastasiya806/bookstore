@@ -10,9 +10,12 @@ const SingIn = () => {
       password: "",
     },
     validationSchema: signInSchema,
-    validateOnChange: false, validateOnBlur: false,
-    onSubmit: (values) => {
+    validateOnChange: false,
+    validateOnBlur: false,
+    onSubmit: (values, { resetForm }) => {
       alert(JSON.stringify(values, null, 2));
+      localStorage.setItem("userData", JSON.stringify(values));
+      resetForm();
     },
   });
 

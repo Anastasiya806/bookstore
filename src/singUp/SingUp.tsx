@@ -1,8 +1,11 @@
 import { useFormik } from "formik";
+import { useNavigate } from "react-router-dom";
 import { signUpSchema } from "../registration/validation";
 import "./singUp.css";
 
 const SingUp = () => {
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -11,9 +14,14 @@ const SingUp = () => {
       confirmPassword: "",
     },
     validationSchema: signUpSchema,
-    validateOnChange: false, validateOnBlur: false,
-    onSubmit: (values) => {
+    validateOnChange: false,
+    validateOnBlur: false,
+    onSubmit: (values, { resetForm }) => {
       alert(JSON.stringify(values, null, 2));
+      localStorage.setItem("userData", JSON.stringify(values));
+      localStorage.setItem("isLogged", "true");
+      navigate("/");
+      resetForm();
     },
   });
 

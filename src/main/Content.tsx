@@ -6,6 +6,7 @@ import SingUp from "../singUp/SingUp";
 import "./content.css";
 import Reset from "../reset/Reset";
 import Registration from "../registration/Registration";
+import Loading from "../common/Loading";
 // import SimilarBooks from "./similarBooks/SimilarBooks";
 
 interface IBook {
@@ -30,16 +31,14 @@ const Content = () => {
 
     fetchData();
   }, []);
-  {/* <SingIn />
-  <SingUp />
-  <Reset /> */}
-  {/* <SimilarBooks /> */}
 
+  if (!data) {
+    return <Loading />;
+  }
+  
   return (
     <div className="content-wrapper">
       <p className="content-title">New releases books</p>
-      <Registration />
-      <Reset />
       <div className="books-wrapper">
         {data && data.map((book) => <Book item={book} />)}
       </div>

@@ -9,8 +9,9 @@ const Reset = () => {
     },
     validationSchema: resetSchema,
     validateOnChange: false, validateOnBlur: false,
-    onSubmit: (values) => {
+    onSubmit: (values, {resetForm}) => {
       alert(JSON.stringify(values, null, 2));
+      resetForm();
     },
   });
 

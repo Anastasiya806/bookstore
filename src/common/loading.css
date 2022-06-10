@@ -1,0 +1,14 @@
+.loading-wrapper{
+    height: 1000px;
+}
+
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
