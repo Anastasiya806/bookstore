@@ -11,8 +11,8 @@ function App() {
   return (
     <div className="common-wrapper">
       {/* <Header /> */}
-      {/* <Content />
-      <Subscribe /> */}
+      {/* <Content /> */}
+      {/* <Subscribe /> */}
       {/* <Account /> */}
       {/* <Footer /> */}
       {/* <Item /> */}

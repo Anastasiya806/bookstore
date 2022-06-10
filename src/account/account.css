@@ -1,79 +1,79 @@
 .account-wrapper {
-    margin-top: 77px;
+  margin-top: 77px;
 }
 
-.account-title{
-    margin: 0px 0 48px;
+.account-title {
+  margin: 0px 0 48px;
 }
 
 .account-profile {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
 }
 
 .account-profile p {
-   font-family: Jost;
-    font-weight: 700;
-    font-size: 16px;
-    margin: 16px 0 10px; 
+  font-family: Jost;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 16px 0 10px;
 }
 .account-wrapper input {
-    font-family: Jost;
-    font-weight: 400;
-    font-size: 16px;
-    padding: 14px 0 10px 20px;
-    width: 520px;
+  font-family: Jost;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 14px 0 10px 20px;
+  width: 520px;
 }
 
-.account-password p{
-    font-family: Jost;
-    font-weight: 700;
-    font-size: 16px;
-    margin: 16px 0 10px; 
+.account-password p {
+  font-family: Jost;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 16px 0 10px;
 }
 
-.account-newPassword{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 72px;
+.account-newPassword {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 72px;
 }
 
 .account-newPassword p {
-    font-family: Jost;
-    font-weight: 700;
-    font-size: 16px;
-    margin: 16px 0 10px; 
+  font-family: Jost;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 16px 0 10px;
 }
 
 .account-buttons {
-    display: flex;
-    justify-content: flex-end;
-    border-top: 1px solid #E7E7E7;
-    padding: 48px 0 72px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #e7e7e7;
+  padding: 48px 0 72px;
 }
 
-.account-buttons  button{
-    width: 256px;
-    height: 56px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Jost;
-    font-weight: 400;
-    font-size: 20px;
-    text-transform: uppercase;
+.account-buttons button {
+  width: 256px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Jost;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 .account-buttonSave {
-    margin-right: 32px;
-    background-color: #313037;
-    color: #fff;
-    border-width: 0;
+  margin-right: 32px;
+  background-color: #313037;
+  color: #fff;
+  border-width: 0;
 }
 
-.account-buttonCancel{
-    background-color: #fff;
-    color: #313037;
-    border: 1px solid #E7E7E7;
+.account-buttonCancel {
+  background-color: #fff;
+  color: #313037;
+  border: 1px solid #e7e7e7;
 }

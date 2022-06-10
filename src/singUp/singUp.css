@@ -1,0 +1,57 @@
+.singUp-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 108px 0 116px;
+  border: 1px solid #e7e7e7e7;
+}
+
+.singUp-buttons {
+  border-bottom: 1px solid #e7e7e7e7;
+  margin-bottom: 30px;
+}
+
+.singUp-buttons button {
+  border-width: 0;
+  font-family: Jost;
+  font-weight: 500;
+  font-size: 24px;
+  padding: 24px 40px;
+  background-color: #fff;
+  color: #a8a8a8;
+  text-transform: uppercase;
+}
+
+.singUp-buttons button:hover {
+  color: #313037;
+  border-bottom: 1px solid #313037;
+}
+
+.singUp-profile p{
+    font-family: Jost;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 16px 0 10px; 
+}
+
+.singUp-profile input{
+     font-family: Jost;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 14px 0 10px 20px;
+    width: 480px;
+}
+
+
+.singUp-button {
+  background-color: #313037;
+  color: #fff;
+  font-family: Jost;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 16px 214px;
+  text-transform: uppercase;
+  border-width: 0;
+  margin: 40px 0;
+}

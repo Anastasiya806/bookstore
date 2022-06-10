@@ -1,8 +1,12 @@
 import Book from "./Book";
-import "./content.css";
 import { useState, useEffect } from "react";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
+import Subscribe from "../subscribe/Subscribe";
+import SingIn from "../singIn/SingIn";
+import SingUp from "../singUp/SingUp";
+import "./content.css";
+import Reset from "../reset/Reset";
 
 interface IBook {
   image: string;
@@ -36,7 +40,11 @@ const Content = () => {
           {data && data.map((book) => <Book item={book} />)}
         </div>
       </div>
+      <Subscribe />
       <Footer />
+      {/* <SingIn /> */}
+      {/* <SingUp /> */}
+      {/* <Reset /> */}
     </div>
   );
 };

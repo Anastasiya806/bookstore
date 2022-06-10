@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "./App";
-import Footer from "./subscribe/Subscribe";
-import Header from "./header/Header";
 import "./null.css"
 import Account from "./account/Account";
 import Content from "./main/Content";

@@ -1,0 +1,41 @@
+.paset-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 270px 0 280px;
+  border: 1px solid #e7e7e7e7;
+  padding: 40px 0;
+}
+
+.pased-title{
+   
+}
+
+.reset-email p {
+  font-family: Jost;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 16px 0 10px;
+}
+
+.reset-email input {
+  font-family: Jost;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 14px 0 10px 20px;
+  width: 460px;
+}
+
+.reset-button {
+    background-color: #313037;
+  color: #fff;
+  font-family: Jost;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 16px 0;
+  width: 480px;
+  text-transform: uppercase;
+  border-width: 0;
+  margin: 40px 0 0;
+}
