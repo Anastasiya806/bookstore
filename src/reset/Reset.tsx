@@ -1,25 +1,42 @@
-import Footer from "../footer/Footer"
-import Header from "../header/Header"
-import '../common.css'
-import "./reset.css"
+import { useFormik } from "formik";
+import { resetSchema } from "../registration/validation";
+import "./reset.css";
 
 const Reset = () => {
-    return (
-      <div>
-        <Header />
-        <div className="paset-wrapper">
-          <div className="pased-title">
-            <p className="common-subtitle">Reset password</p>
-          </div>
-          <div className="reset-email">
-            <p>Email</p>
-            <input type="email" placeholder="Your email" />
-          </div>
-          <button className="reset-button">Reset</button>
-        </div>
-        <Footer />
-      </div>
-    );
-}
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+    },
+    validationSchema: resetSchema,
+    validateOnChange: false, validateOnBlur: false,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
 
-export default Reset
+  return (
+    <form className="paset-wrapper" onSubmit={formik.handleSubmit}>
+      <div className="pased-title">
+        <p>Reset password</p>
+      </div>
+      <div className="reset-email">
+        <p>Email</p>
+        <input
+          id="email"
+          type="email"
+          onChange={formik.handleChange}
+          value={formik.values.email}
+          placeholder="Your email"
+        />
+        {formik.errors.email && (
+          <p className="common-error__text">{formik.errors.email}</p>
+        )}
+      </div>
+      <button className="reset-button" type="submit">
+        Reset
+      </button>
+    </form>
+  );
+};
+
+export default Reset;

@@ -1,29 +1,54 @@
-import Footer from "../footer/Footer";
-import Header from "../header/Header";
+import { useFormik } from "formik";
+import { signInSchema } from "../registration/validation";
+
 import "./singIn.css";
 
 const SingIn = () => {
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: signInSchema,
+    validateOnChange: false, validateOnBlur: false,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
+
   return (
-    <div>
-        <Header />
-      <div className="singIn-wrapper">
-        <div className="singIn-buttons">
-          <button>Sing in</button>
-          <button>Sing up</button>
-        </div>
-        <div className="singIn-email">
-          <p>Email</p>
-          <input type="email" placeholder="Your email" />
-        </div>
-        <div className="singIn-password">
-          <p>Password</p>
-          <input type="password" placeholder="Your password" />
-        </div>
-        <p className="singIn-text">Forgot password ?</p>
-        <button className="singIn-button">Sing in</button>
+    <form className="singIn-wrapper" onSubmit={formik.handleSubmit}>
+      <div className="singIn-email">
+        <p>Email</p>
+        <input
+          id="email"
+          type="email"
+          onChange={formik.handleChange}
+          value={formik.values.email}
+          placeholder="Your email"
+        />
+        {formik.errors.email && (
+          <p className="common-error__text">{formik.errors.email}</p>
+        )}
       </div>
-      <Footer />
-    </div>
+      <div className="singIn-password">
+        <p>Password</p>
+        <input
+          id="password"
+          type="password"
+          onChange={formik.handleChange}
+          value={formik.values.password}
+          placeholder="Your password"
+        />
+        {formik.errors.password && (
+          <p className="common-error__text">{formik.errors.password}</p>
+        )}
+      </div>
+      <p className="singIn-text">Forgot password ?</p>
+      <button className="singIn-button" type="submit">
+        Sing in
+      </button>
+    </form>
   );
 };
 

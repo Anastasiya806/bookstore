@@ -5,6 +5,7 @@ import SingIn from "../singIn/SingIn";
 import SingUp from "../singUp/SingUp";
 import "./content.css";
 import Reset from "../reset/Reset";
+import Registration from "../registration/Registration";
 // import SimilarBooks from "./similarBooks/SimilarBooks";
 
 interface IBook {
@@ -35,13 +36,15 @@ const Content = () => {
   {/* <SimilarBooks /> */}
 
   return (
-      <div className="content-wrapper">
-        <p className="content-title">New releases books</p>
-        <div className="books-wrapper">
-          {data && data.map((book) => <Book item={book} />)}
-        </div>
-        <Subscribe />
+    <div className="content-wrapper">
+      <p className="content-title">New releases books</p>
+      <Registration />
+      <Reset />
+      <div className="books-wrapper">
+        {data && data.map((book) => <Book item={book} />)}
       </div>
+      <Subscribe />
+    </div>
   );
 };
 

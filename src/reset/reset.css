@@ -8,8 +8,11 @@
   padding: 40px 0;
 }
 
-.pased-title{
-   
+.pased-title {
+  font-family: Cormorant;
+  font-weight: 700;
+  font-size: 50px;
+  text-transform: uppercase;
 }
 
 .reset-email p {
@@ -28,7 +31,7 @@
 }
 
 .reset-button {
-    background-color: #313037;
+  background-color: #313037;
   color: #fff;
   font-family: Jost;
   font-weight: 500;

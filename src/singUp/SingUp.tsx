@@ -1,31 +1,75 @@
-import Footer from '../footer/Footer'
-import Header from '../header/Header'
-import './singUp.css'
+import { useFormik } from "formik";
+import { signUpSchema } from "../registration/validation";
+import "./singUp.css";
 
 const SingUp = () => {
-    return (
-      <div>
-        <Header />
-        <div className="singUp-wrapper">
-          <div className="singUp-buttons">
-            <button>Sing in</button>
-            <button>Sing up</button>
-          </div>
-          <div className="singUp-profile">
-            <p>Name</p>
-            <input type="text" placeholder="Your name" />
-            <p>Email</p>
-            <input type="email" placeholder="Your email" />
-            <p>Password</p>
-            <input type="password" placeholder="Your password" />
-            <p>Confirm new password</p>
-            <input type="password" placeholder="Confirm your password" />
-          </div>
-          <button className="singUp-button">Sing up</button>
-        </div>
-        <Footer />
-      </div>
-    );
-}
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    },
+    validationSchema: signUpSchema,
+    validateOnChange: false, validateOnBlur: false,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
 
-export default SingUp
+  return (
+    <form className="singUp-wrapper" onSubmit={formik.handleSubmit}>
+      <div className="singUp-profile">
+        <p>Name</p>
+        <input
+          id="name"
+          type="text"
+          onChange={formik.handleChange}
+          value={formik.values.name}
+          placeholder="Your name"
+        />
+        {formik.errors.name && (
+          <p className="common-error__text">{formik.errors.name}</p>
+        )}
+        <p>Email</p>
+        <input
+          id="email"
+          type="email"
+          onChange={formik.handleChange}
+          value={formik.values.email}
+          placeholder="Your email"
+        />
+        {formik.errors.email && (
+          <p className="common-error__text">{formik.errors.email}</p>
+        )}
+        <p>Password</p>
+        <input
+          id="password"
+          type="password"
+          onChange={formik.handleChange}
+          value={formik.values.password}
+          placeholder="Your password"
+        />
+        {formik.errors.password && (
+          <p className="common-error__text">{formik.errors.password}</p>
+        )}
+        <p>Confirm new password</p>
+        <input
+          id="confirmPassword"
+          type="password"
+          onChange={formik.handleChange}
+          value={formik.values.confirmPassword}
+          placeholder="Confirm your password"
+        />
+        {formik.errors.confirmPassword && (
+          <p className="common-error__text">{formik.errors.confirmPassword}</p>
+        )}
+      </div>
+      <button className="singUp-button" type="submit">
+        Sing up
+      </button>
+    </form>
+  );
+};
+
+export default SingUp;
