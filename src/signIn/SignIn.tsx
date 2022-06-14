@@ -1,9 +1,8 @@
 import { useFormik } from "formik";
 import { signInSchema } from "../registration/validation";
+import "./signIn.css";
 
-import "./singIn.css";
-
-const SingIn = () => {
+const SignIn = () => {
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -20,8 +19,8 @@ const SingIn = () => {
   });
 
   return (
-    <form className="singIn-wrapper" onSubmit={formik.handleSubmit}>
-      <div className="singIn-email">
+    <form className="signIn-wrapper" onSubmit={formik.handleSubmit}>
+      <div className="signIn-email">
         <p>Email</p>
         <input
           id="email"
@@ -34,7 +33,7 @@ const SingIn = () => {
           <p className="common-error__text">{formik.errors.email}</p>
         )}
       </div>
-      <div className="singIn-password">
+      <div className="signIn-password">
         <p>Password</p>
         <input
           id="password"
@@ -47,12 +46,12 @@ const SingIn = () => {
           <p className="common-error__text">{formik.errors.password}</p>
         )}
       </div>
-      <p className="singIn-text">Forgot password ?</p>
-      <button className="singIn-button" type="submit">
-        Sing in
+      <p className="signIn-text">Forgot password ?</p>
+      <button className="signIn-button" type="submit">
+        Sign in
       </button>
     </form>
   );
 };
 
-export default SingIn;
+export default SignIn;

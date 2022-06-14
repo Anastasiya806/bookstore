@@ -1,8 +1,5 @@
-.loading-wrapper{
-    height: 1000px;
-}
-
 .loading {
+  background-color: #fff;
   width: 100%;
   display: flex;
   justify-content: center;

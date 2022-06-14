@@ -18,8 +18,8 @@ const Header = () => {
         <div className="search"></div>
       </div>
       <div className="icons">
-        <div className="like svg"></div>
         <div className="shop svg"></div>
+        <div className="like svg"></div>
         {isLogged === "true" ? (
           <Link to="accountSettings">
             <div className="user svg"></div>

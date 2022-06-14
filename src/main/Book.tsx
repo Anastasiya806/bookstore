@@ -1,23 +1,34 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { IBook } from "../common/types";
+import { getBackgroundColor } from "../utils/bookColors";
 import "./book.css";
 import Rating from "./Rating";
 
-interface IBook {
-  image: string;
-  isbn13: string;
-  price: string;
-  subtitle: string;
-  title: string;
-  url: string;
-}
-
 const Book = (props: {item: IBook}) => {
   const { title, subtitle, price, image, isbn13 } = props.item;
+  const [backgroundColor, setBackgroundColor] = useState(""); 
+  const [rating, setRating] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetch(
+        `https://api.itbook.store/1.0/books/${isbn13}`
+      );
+      const resJson = await result.json();
+
+      setRating(resJson.rating);
+    };
+
+    fetchData();
+    setBackgroundColor(getBackgroundColor());
+  }, []);
+
 
   return (
     <Link to={`/books/${isbn13}`}>
       <div className="book-wrapper">
-        <div className="book-img">
+        <div className="book-img" style={{ backgroundColor: backgroundColor }}>
           <img src={image} />
         </div>
         <div className="book-info">
@@ -28,7 +39,7 @@ const Book = (props: {item: IBook}) => {
           <div className="book-attributes">
             <p className="price">{price}</p>
             <div className="rating">
-            <Rating stars={'4'} />
+              {rating && <Rating stars={rating} />}
             </div>
           </div>
         </div>

@@ -22,7 +22,6 @@
   justify-content: center;
   width: 544px;
   height: 472px;
-  background-color: #fee9e2;
 }
 
 .item-inform {
@@ -107,6 +106,11 @@
 }
 
 .item-tab button:hover {
+  color: #313037;
+  border-bottom: 1px solid #313037;
+}
+
+.item-tab button:active {
   color: #313037;
   border-bottom: 1px solid #313037;
 }

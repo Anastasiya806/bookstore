@@ -1,6 +1,6 @@
 import { useState } from "react";
-import SingIn from "../singIn/SingIn";
-import SingUp from "../singUp/SingUp";
+import SignIn from "../signIn/SignIn";
+import SignUp from "../signUp/SignUp";
 import "./registration.css";
 
 const Registration = () => {
@@ -8,12 +8,12 @@ const Registration = () => {
 
   return (
     <div className="registration-wrapper">
-      <div className="singIn-buttons">
-        <button onClick={() => setCurrentPage("signIn")}>Sing in</button>
-        <button onClick={() => setCurrentPage("signUp")}>Sing up</button>
+      <div className="signIn-buttons">
+        <button onClick={() => setCurrentPage("signIn")}>Sign in</button>
+        <button onClick={() => setCurrentPage("signUp")}>Sign up</button>
       </div>
-      {currentPage === "signIn" && <SingIn />}
-      {currentPage === "signUp" && <SingUp />}
+      {currentPage === "signIn" && <SignIn />}
+      {currentPage === "signUp" && <SignUp />}
     </div>
   );
 };

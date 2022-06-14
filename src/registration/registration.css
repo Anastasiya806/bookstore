@@ -7,11 +7,11 @@
   border: 1px solid #e7e7e7e7;
 }
 
-.singIn-buttons {
+.signIn-buttons {
   border-bottom: 1px solid #e7e7e7e7;
 }
 
-.singIn-buttons button {
+.signIn-buttons button {
   border-width: 0;
   font-family: Jost;
   font-weight: 500;
@@ -22,7 +22,12 @@
   text-transform: uppercase;
 }
 
-.singIn-buttons button:hover {
+.signIn-buttons button:hover {
+  color: #313037;
+  border-bottom: 1px solid #313037;
+}
+
+.signIn-buttons button:active {
   color: #313037;
   border-bottom: 1px solid #313037;
 }

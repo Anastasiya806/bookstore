@@ -1,22 +1,10 @@
 import Book from "./Book";
 import { useState, useEffect } from "react";
 import Subscribe from "../subscribe/Subscribe";
-import SingIn from "../singIn/SingIn";
-import SingUp from "../singUp/SingUp";
 import "./content.css";
-import Reset from "../reset/Reset";
-import Registration from "../registration/Registration";
 import Loading from "../common/Loading";
-// import SimilarBooks from "./similarBooks/SimilarBooks";
+import { IBook } from "../common/types";
 
-interface IBook {
-  image: string;
-  isbn13: string;
-  price: string;
-  subtitle: string;
-  title: string;
-  url: string;
-}
 
 const Content = () => {
   const [data, setData] = useState<IBook[] | null>(null);
@@ -35,7 +23,7 @@ const Content = () => {
   if (!data) {
     return <Loading />;
   }
-  
+
   return (
     <div className="content-wrapper">
       <p className="content-title">New releases books</p>

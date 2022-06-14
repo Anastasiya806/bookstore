@@ -1,9 +1,9 @@
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import { signUpSchema } from "../registration/validation";
-import "./singUp.css";
+import "./signUp.css";
 
-const SingUp = () => {
+const SignUp = () => {
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -26,8 +26,8 @@ const SingUp = () => {
   });
 
   return (
-    <form className="singUp-wrapper" onSubmit={formik.handleSubmit}>
-      <div className="singUp-profile">
+    <form className="signUp-wrapper" onSubmit={formik.handleSubmit}>
+      <div className="signUp-profile">
         <p>Name</p>
         <input
           id="name"
@@ -73,11 +73,11 @@ const SingUp = () => {
           <p className="common-error__text">{formik.errors.confirmPassword}</p>
         )}
       </div>
-      <button className="singUp-button" type="submit">
-        Sing up
+      <button className="signUp-button" type="submit">
+        Sign up
       </button>
     </form>
   );
 };
 
-export default SingUp;
+export default SignUp;

@@ -1,11 +1,11 @@
-.singIn-email p {
+.signIn-email p {
   font-family: Jost;
   font-weight: 700;
   font-size: 16px;
   margin: 16px 0 10px;
 }
 
-.singIn-email input {
+.signIn-email input {
   font-family: Jost;
   font-weight: 400;
   font-size: 16px;
@@ -13,14 +13,14 @@
   width: 480px;
 }
 
-.singIn-password p {
+.signIn-password p {
   font-family: Jost;
   font-weight: 700;
   font-size: 16px;
   margin: 16px 0 10px;
 }
 
-.singIn-password input {
+.signIn-password input {
   font-family: Jost;
   font-weight: 400;
   font-size: 16px;
@@ -28,14 +28,14 @@
   width: 480px;
 }
 
-.singIn-text {
+.signIn-text {
   font-family: Jost;
   font-weight: 400;
   font-size: 14px;
   margin: 16px 0 40px;
 }
 
-.singIn-button {
+.signIn-button {
   background-color: #313037;
   color: #fff;
   font-family: Jost;

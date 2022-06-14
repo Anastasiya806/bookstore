@@ -5,25 +5,15 @@ import Rating from "../Rating";
 import "./item.css";
 import Subscribe from "../../subscribe/Subscribe";
 import Loading from "../../common/Loading";
+import { getBackgroundColor } from "../../utils/bookColors";
+import { IBook } from "../../common/types";
 
-interface IBookItem {
-  title: string;
-  subtitle: string;
-  authors: string;
-  publisher: string;
-  pages: string;
-  year: string;
-  rating: string;
-  desc: string;
-  price: string;
-  image: string;
-  url: string;
-}
 
 const Item = () => {
-  const [data, setData] = useState<IBookItem | null>(null);
+  const [data, setData] = useState<IBook | null>(null);
   const [rating, setRating] = useState(null);
   const { bookId } = useParams();
+  const [backgroundColor, setBackgroundColor] = useState("") 
   console.log(bookId);
 
   useEffect(() => {
@@ -38,6 +28,7 @@ const Item = () => {
     };
 
     fetchData();
+    setBackgroundColor(getBackgroundColor());
   }, []);
 
   if (!data) {
@@ -51,7 +42,7 @@ const Item = () => {
       </Link>
       <p className="item-name">{data && data.title}</p>
       <div className="item-info">
-        <div className="item-img">
+        <div className="item-img" style={{ backgroundColor: backgroundColor }}>
           <img src={data?.image} alt="" />
         </div>
         <div className="item-attributes">
