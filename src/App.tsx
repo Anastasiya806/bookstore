@@ -8,6 +8,7 @@ import Account from "./account/Account";
 import "./common.css";
 import "./null.css";
 import Registration from "./registration/Registration";
+import Cart from "./cart/Cart";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/accountSettings" element={<Account />} />
             <Route path="/books/:bookId" element={<Item />} />
             <Route path="/registration" element={<Registration />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
           <Footer />
         </div>

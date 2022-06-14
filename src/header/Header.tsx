@@ -41,7 +41,9 @@ const Header = () => {
         </div>
       </div>
       <div className="icons">
-        <div className="shop svg"></div>
+        <Link to="cart">
+          <div className="shop svg"></div>
+        </Link>
         <div className="like svg"></div>
         {isLogged === "true" ? (
           <Link to="accountSettings">

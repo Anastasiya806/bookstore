@@ -14,3 +14,7 @@ export interface IBook {
   image: string;
   url: string;
 }
+
+export interface IBookCost {
+  [key: string]:number
+}

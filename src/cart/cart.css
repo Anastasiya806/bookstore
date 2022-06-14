@@ -1,0 +1,36 @@
+.cart-title {
+  font-family: Cormorant;
+  font-weight: 600;
+  font-size: 34px;
+  text-transform: uppercase;
+}
+
+.total-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin: 48px 0 72px 0;
+}
+
+.total-info {
+  width: 30%;
+}
+
+.total-info div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.total-button {
+  background-color: #313037;
+  color: #fff;
+  font-family: Jost;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 16px;
+  width: 100%;
+  text-transform: uppercase;
+  border-width: 0;
+  margin-bottom: 40px;
+}

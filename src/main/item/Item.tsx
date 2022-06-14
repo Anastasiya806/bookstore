@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Rating from "../Rating";
@@ -29,6 +29,30 @@ const Item = () => {
     fetchData();
     setBackgroundColor(getBackgroundColor());
   }, [bookId]);
+
+  const addToCart = useCallback(() => {
+    const getLogged = localStorage.getItem("isLogged")
+
+    if (!getLogged) {
+      return alert ("You are not logged!")
+    }
+
+    if (data && data.price === "$0.00") {
+      return alert ("Sorry, we don`t have this book yet...")
+    }
+
+    const cartBooks = localStorage.getItem("cartBooks")
+    if (cartBooks && bookId) {
+      const addedBooks = JSON.parse(cartBooks)
+      if (cartBooks.includes(bookId)) {
+        return
+      }
+
+      localStorage.setItem("cartBooks", JSON.stringify([...addedBooks, bookId]))
+    } else {
+      localStorage.setItem("cartBooks", JSON.stringify([bookId]))
+    }
+  }, [])
 
   if (!data) {
     return <Loading />;
@@ -69,7 +93,7 @@ const Item = () => {
               <p> Paper book /ebook (PDF)</p>
             </div>
           </div>
-          <button className="item-button">Add to cart</button>
+          <button className="item-button" onClick={addToCart}>Add to cart</button>
         </div>
       </div>
       <div className="item-content">
