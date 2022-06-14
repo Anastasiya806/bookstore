@@ -14,7 +14,6 @@ const Item = () => {
   const [rating, setRating] = useState(null);
   const { bookId } = useParams();
   const [backgroundColor, setBackgroundColor] = useState("") 
-  console.log(bookId);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,7 +28,7 @@ const Item = () => {
 
     fetchData();
     setBackgroundColor(getBackgroundColor());
-  }, []);
+  }, [bookId]);
 
   if (!data) {
     return <Loading />;
