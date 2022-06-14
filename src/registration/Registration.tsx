@@ -9,8 +9,27 @@ const Registration = () => {
   return (
     <div className="registration-wrapper">
       <div className="signIn-buttons">
-        <button onClick={() => setCurrentPage("signIn")}>Sign in</button>
-        <button onClick={() => setCurrentPage("signUp")}>Sign up</button>
+        {currentPage === "signIn" ? (
+          <>
+            <button
+              onClick={() => setCurrentPage("signIn")}
+              className="active-button"
+            >
+              Sign in
+            </button>
+            <button onClick={() => setCurrentPage("signUp")}>Sign up</button>
+          </>
+        ) : (
+          <>
+            <button onClick={() => setCurrentPage("signIn")}>Sign in</button>
+            <button
+              onClick={() => setCurrentPage("signUp")}
+              className="active-button"
+            >
+              Sign up
+            </button>
+          </>
+        )}
       </div>
       {currentPage === "signIn" && <SignIn />}
       {currentPage === "signUp" && <SignUp />}

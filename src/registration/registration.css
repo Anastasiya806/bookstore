@@ -22,12 +22,7 @@
   text-transform: uppercase;
 }
 
-.signIn-buttons button:hover {
-  color: #313037;
-  border-bottom: 1px solid #313037;
-}
-
-.signIn-buttons button:active {
+.signIn-buttons .active-button{
   color: #313037;
   border-bottom: 1px solid #313037;
 }
